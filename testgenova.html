@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LIFF App</title>
+    <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+    <script>
+        function initializeLiff() {
+            liff.init({ liffId: '2005444860-BMdvMldd' }).then(() => {
+                // LIFF initialized
+                if (!liff.isInClient()) {
+                    window.location = "https://genova.co.jp/";
+                }
+            }).catch(err => {
+                console.error('LIFF Initialization failed ', err);
+            });
+        }
+        window.onload = initializeLiff;
+    </script>
+</head>
+<body>
+    <h1>Loading...</h1>
+</body>
+</html>
